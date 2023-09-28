@@ -74,6 +74,17 @@
           <compilerArgument>-Werror</compilerArgument>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>io.gatling</groupId>
+        <artifactId>gatling-maven-plugin</artifactId>
+        <version>${gatling.plugin.version}</version>
+        <configuration>
+          <simulationsFolder>src/test/java/com/spotify/api</simulationsFolder>
+          <includes>
+            <include>performance.SpotifyGetAlbumSimulation</include>
+          </includes>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>

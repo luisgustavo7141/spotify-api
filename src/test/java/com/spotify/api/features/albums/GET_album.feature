@@ -15,4 +15,5 @@ Feature: Get Album Spotify
     Then status 200
       And print $
       And match $response.album_type == "album"
+      And match response.artists[*].name contains "Pitbull"
 
